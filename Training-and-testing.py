@@ -25,3 +25,4 @@ f.close()
 
 f = open(labelEncFile, "wb")
 f.write(pickle.dumps(labelEnc))
+f.close()
