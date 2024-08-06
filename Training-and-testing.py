@@ -3,7 +3,7 @@ from sklearn.svm import SVC
 import pickle
 
 
-embeddingFile = "output/embeddings.pickle"
+embeddingFile = "output/embedding.pickle"
 recognizerFile = "output/recognizer.pickle"
 labelEncFile = "output/le.pickle"
 
@@ -14,6 +14,8 @@ print("Encoding Labels...")
 labelEnc = LabelEncoder()
 labels = labelEnc.fit_transform(data["names"])
 
+print("Number of embeddings:", len(data["embeddings"]))
+print("Number of labels:", len(labels))
 
 print("Training Model...")
 recognizer = SVC(C=1.0, kernel="linear", probability=True)

@@ -62,6 +62,7 @@ for (i, imagePath) in enumerate(imagePaths):
             knownEmbeddings.append(vec.flatten())
             total += 1
 
+
 print("Embeddings:{0}".format(total))
 data = {"embeddings": knownEmbeddings, "names": KnownNames}
 f = open(embeddingFile,"wb")
